@@ -1,6 +1,18 @@
 # Combinations 
+![image](https://user-images.githubusercontent.com/65414576/152682473-6429be73-e592-42f2-9199-72bd811494cc.png)
 
-Explanation for how algorithm works and how to derive it using logic
+
+## Logic for `comb()` :
+Set `all` : stores all possible combinations. 
+
+Vector `ChooseFrom` : elements which are available to be chosen.
+
+`i` : offset for `ChooseFrom`
+
+If `i = 2` and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index 2 -> `{'C', 'D'}`
+
+Given  `ChooseFrom = {'A', 'B', 'C'}` and `r = 2`
+
 
 # Permutations 
 ![image](https://user-images.githubusercontent.com/65414576/152680821-783bb8dd-16d9-4e30-91dc-889c82437283.png)
