@@ -13,7 +13,7 @@ all = {AB, AC, BC}
 
 `i` : offset for `ChooseFrom`
 
-If `i = 2` and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index 2 -> `{'C', 'D'}`
+If `i = 2` and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index 2 :   `{'C', 'D'}`
 
 Given  `ChooseFrom = {'A', 'B', 'C'}` and `r = 2`
 
@@ -29,9 +29,9 @@ This function can be used instead of stars and bars to solve these types of ques
 
 >Find the number of solutions to the equation x + y + z = 5, where x,y,z are non-negative integers.
 
-Put comb1(3,0,"") and ChooseFrom = {0, 1}.
+Put `comb1(3,0,"")` and `ChooseFrom = {0, 1}`.
 
-Answer = all.size() = 7C2  
+Answer = `all.size()` = 7C2
 
 The offset `i` prevents permutations of a combination from being created.
 
@@ -103,3 +103,4 @@ std::set <std::string> perm(std::string current, std::multimap <char, bool> Choo
 - Repeating elements are allowed.
 
 ## perm2() :
+Given n unique elements, choose r elements (duplicates allowed), and arrange.
