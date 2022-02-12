@@ -1,37 +1,46 @@
 #include <set>
 #include <iostream>
 #include <map>
- 
+ #include <iostream>
+#include <string>
+
+std::set<std::string> all; //store all permutations of operators
+std::set<char> ChooseFrom = {'E','+','-','*','/','(',')'}; //used for perm2() only
+
+
 //	Given n elements (duplicates allowed), find all possible arrangements.
+void perm1(std::string current, std::multimap <char, bool> Letters) {
+	if (current.length() == Letters.size()) {all.insert(current); return;}
 
-std::set <std::string> all; 
-
-void perm(std::string current, std::multimap <char, bool> ChooseFrom) {
-	if (current.length() == ChooseFrom.size()) {
-		all.insert(current);
-		return;
-	}
-
-	for (auto &i: ChooseFrom) { 
-		if (i.second == 1) {
+	for (auto &i: Letters) { 
+		if (i.second == 1) { //if i.first has not been used yet
 			i.second = 0; 
-			perm(current + i.first, ChooseFrom);
+			perm1(current + i.first, Letters);
 			i.second = 1; //reset to initial state
 		}
 	}
 }
 
+//Given n unique elements, choose r elements (duplicates allowed), and arrange.
 
+void perm2(int r, std::string current) {
+	if (r == 0){all.insert(current); return;}
+		
+	for (auto j: ChooseFrom) {perm2(r - 1, current + j);}
+}
 
 int main() {
-	std::multimap <char, bool> ChooseFrom; //n elements to be arranged
+	std::multimap <char, bool> Letters; //n elements to be arranged
 
-	std::string m;
-	std::cout << "Enter string : ";
-	std::cin >> m;
-	for (auto c : m) {ChooseFrom.insert({c,1});}
+	//for perm1()
+	//std::string m;
+	//std::cout << "Enter string : ";
+	//std::cin >> m;
+	//for (auto c : m) {Letters.insert({c,1});}
+	//perm1("", Letters);
 
-	perm("", ChooseFrom);
+	//for perm2()
+	perm2(3,"");
 
 	//output
 	int count = 0;
