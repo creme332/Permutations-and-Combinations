@@ -48,13 +48,13 @@ Eg : Given {A, A, B, C} and r = 3,
 
 all = AAB, AAC, ABC 
 
-## `comb3()` :
-
 
 # Permutations 
 ![image](https://user-images.githubusercontent.com/65414576/152680821-783bb8dd-16d9-4e30-91dc-889c82437283.png)
 
 ## perm1() :
+>Given n elements (duplicates allowed), find all possible arrangements.
+
 Set `all` : stores all possible permutations. 
 
 Multimap `ChooseFrom` : 
@@ -65,9 +65,9 @@ Multimap `ChooseFrom` :
 
 There are `n` places.
 
-1st plane has `n` possibilities
+1st plane has `n` possibilities.
 
-2nd place has `n-1` possibilities
+2nd place has `n-1` possibilities.
 
 ...
 
@@ -103,4 +103,4 @@ std::set <std::string> perm(std::string current, std::multimap <char, bool> Choo
 - Repeating elements are allowed.
 
 ## perm2() :
-Given n unique elements, choose r elements (duplicates allowed), and arrange.
+>Given n unique elements, choose r elements (duplicates allowed), and arrange.
