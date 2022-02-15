@@ -111,3 +111,6 @@ At each place $r_i$, there are $n$ ways to place an element.
 Recursion is used to test all possibilities. We stop when `current` reaches required size. 
 
 There is no offset $i$ here since we also have to arrange.
+
+# Cyclic permutations #
+> Arrange n unique elements around a circle.
