@@ -5,37 +5,34 @@
 
 `ChooseFrom` : stores elements which are available to be chosen.
 
-The offset $i$ prevents permutations of a combination from being created.
-## `comb()` :
->Given n unique elements, choose r elements without repetition. The same element cannot be chosen more than once.
+$i$ : offset for `ChooseFrom`
 
-Eg : Given `{A,B,C}` and r = 2,
+If *i* = 2 and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index $2$ :   `{'C', 'D'}`. The offset *i* prevents permutations of a combination from being created.
+## `comb()` :
+>Given n unique elements, choose r elements without repetition (the same element cannot be chosen more than once).
+
+Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`,
 
 `all = {AB, AC, BC}`
 
-$i$ : offset for `ChooseFrom`
-
-If $i = 2$ and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index $2$ :   `{'C', 'D'}`
-
-
 ## `comb1()` :
 
->Given n unique elements, choose r elements with repetition. The same element can be chosen more than once.
+>Given n unique elements, choose r elements with repetition (the same element can be chosen more than once).
 
-Eg : Given `{A,B,C}` and r = 2, 
+Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`, 
 
 `all = {AA, AB, AC, BB, BC, CC}`
 
 ## `comb2()` :
 >Given n elements, some of which may not unique, choose r elements. You cannot use more elements than given. 
 
-Ex1 : `Given {A, A, B, C} and r = 2`,
+Eg1 : Set `ChooseFrom = {A, A, B, C}` and `r = 2`,
 
-all = AA, AB, AC, BA, BB, BC, CA,CB, CC 
+`all = {AA, AB, AC, BA, BB, BC, CA,CB, CC} `
 
 Note : At most 2 As are used.
 	
-Ex2 : Given `{A, A, B, C}` and r = 3,
+Eg2 : Given `{A, A, B, C}` and r = 3,
 
 `all = AAB, AAC, ABC `
 
@@ -46,6 +43,8 @@ Ex2 : Given `{A, A, B, C}` and r = 3,
 ## `perm1()` :
 >Given n elements (duplicates allowed), find all possible arrangements.
 
+
+### Code explanation ###
 `all` : stores all possible permutations. 
 
 Multimap `ChooseFrom` : 
@@ -96,6 +95,11 @@ std::set <std::string> perm(std::string current, std::multimap <char, bool> Choo
 ## `perm2()` :
 >Given n unique elements, choose r elements with repetition, and arrange.
 
+Eg : Set `ChooseFrom = {a,b,c}` and `r=2`,
+
+`all = {aa, ab, ac, ba, bb, bc, ca, cb, cc}`
+
+### Code explanation
 There are r places to fill using n elements. Any element n_k can be at multiple places.
 
 At each place r_i, there are n ways to place an element.
@@ -106,4 +110,4 @@ There is no offset i here since we also have to arrange.
 
 # Cyclic permutations #
 > Arrange n unique elements around a circle.
-Simply arrange n-1 elements only.
+Same as Permutations except arrange n-1 elements instead of n elements..

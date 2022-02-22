@@ -5,7 +5,7 @@
 #include <string>
 
 std::set<std::string> all; //store all permutations of operators
-std::set<char> ChooseFrom = {'E','+','-','*','/','(',')'}; //used for perm2() only
+std::set<char> ChooseFrom = {'a','b','c'}; //used for perm2() only
 
 
 //	Given n elements (duplicates allowed), find all possible arrangements.
@@ -40,7 +40,7 @@ int main() {
 	//perm1("", Letters);
 
 	//for perm2()
-	perm2(3,"");
+	perm2(2,"");
 
 	//output
 	int count = 0;

@@ -73,6 +73,7 @@ int main() {
 	std::cin >> r;
 
 	for (auto i : m) {ChooseFrom.push_back(i);}
+	
 	sort(ChooseFrom.begin(), ChooseFrom.end()); //ChooseFrom MUST be sorted for comb2 to work
 
 	std::cout << "Choose number to :" << "\n";
