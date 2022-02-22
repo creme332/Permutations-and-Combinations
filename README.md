@@ -45,6 +45,7 @@ Eg2 : Given `{A, A, B, C}` and r = 3,
 ## `perm1()` :
 >Given n elements (duplicates allowed), find all possible arrangements.
 
+The multimap `Letters` holds the n elements.
 
 ### Code explanation ###
 `all` : stores all possible permutations. 
