@@ -7,9 +7,9 @@
 
 The offset $i$ prevents permutations of a combination from being created.
 ## `comb()` :
->Given $n$ unique elements, choose $r$ elements without repetition. The same element cannot be chosen more than once.
+>Given n unique elements, choose r elements without repetition. The same element cannot be chosen more than once.
 
-Eg : Given `{A,B,C}` and $r = 2$,
+Eg : Given `{A,B,C}` and r = 2,
 
 `all = {AB, AC, BC}`
 
@@ -20,22 +20,14 @@ If $i = 2$ and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose ele
 
 ## `comb1()` :
 
->Given $n$ unique elements, choose $r$ elements with repetition. The same element can be chosen more than once.
+>Given n unique elements, choose r elements with repetition. The same element can be chosen more than once.
 
-Eg : Given `{A,B,C}` and $r = 2$, 
+Eg : Given `{A,B,C}` and r = 2, 
 
 `all = {AA, AB, AC, BB, BC, CC}`
 
-This function can be used instead of stars and bars to solve these types of questions :
-
->Find the number of solutions to the equation $x + y + z = 5$, where $x,y,z$ are non-negative integers.
-
-Calculate `comb1(3,0,"")` given `ChooseFrom = {0, 1}`.
-
-Answer = `all.size()` = $7C2$
-
 ## `comb2()` :
->Given $n$ elements, some of which may not unique, choose $r$ elements. You cannot use more elements than given. 
+>Given n elements, some of which may not unique, choose r elements. You cannot use more elements than given. 
 
 Ex1 : `Given {A, A, B, C} and r = 2`,
 
@@ -43,7 +35,7 @@ all = AA, AB, AC, BA, BB, BC, CA,CB, CC
 
 Note : At most 2 As are used.
 	
-Ex2 : Given `{A, A, B, C}` and $r = 3$,
+Ex2 : Given `{A, A, B, C}` and r = 3,
 
 `all = AAB, AAC, ABC `
 
@@ -54,7 +46,7 @@ Ex2 : Given `{A, A, B, C}` and $r = 3$,
 ## `perm1()` :
 >Given n elements (duplicates allowed), find all possible arrangements.
 
-Set `all` : stores all possible permutations. 
+`all` : stores all possible permutations. 
 
 Multimap `ChooseFrom` : 
 - Key : elements which are to be permuted.
@@ -102,15 +94,16 @@ std::set <std::string> perm(std::string current, std::multimap <char, bool> Choo
 - Repeating elements are allowed.
 
 ## `perm2()` :
->Given $n$ unique elements, choose $r$ elements with repetition, and arrange.
+>Given n unique elements, choose r elements with repetition, and arrange.
 
-There are $r$ places to fill using $n$ elements. Any element $n_k$ can be at multiple places.
+There are r places to fill using n elements. Any element n_k can be at multiple places.
 
-At each place $r_i$, there are $n$ ways to place an element.
+At each place r_i, there are n ways to place an element.
 
 Recursion is used to test all possibilities. We stop when `current` reaches required size. 
 
-There is no offset $i$ here since we also have to arrange.
+There is no offset i here since we also have to arrange.
 
 # Cyclic permutations #
 > Arrange n unique elements around a circle.
+Simply arrange n-1 elements only.
