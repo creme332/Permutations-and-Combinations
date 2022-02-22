@@ -1,11 +1,10 @@
 # Combinations 
-![image](https://user-images.githubusercontent.com/65414576/152682473-6429be73-e592-42f2-9199-72bd811494cc.png)
 
 `all` : stores all possible combinations. 
 
 `ChooseFrom` : stores elements which are available to be chosen.
 
-$i$ : offset for `ChooseFrom`
+*i* : offset for `ChooseFrom`
 
 If *i* = 2 and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose elements starting from index $2$ :   `{'C', 'D'}`. The offset *i* prevents permutations of a combination from being created.
 ## `comb()` :
@@ -14,6 +13,9 @@ If *i* = 2 and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose ele
 Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`,
 
 `all = {AB, AC, BC}`
+
+![image](https://user-images.githubusercontent.com/65414576/155157469-e278d864-1500-4e58-996d-3f5bd2ece10c.png)
+
 
 ## `comb1()` :
 
@@ -55,7 +57,7 @@ Multimap `ChooseFrom` :
 
 There are `n` places.
 
-1st plane has `n` possibilities.
+1st place has `n` possibilities.
 
 2nd place has `n-1` possibilities.
 
@@ -110,4 +112,5 @@ There is no offset i here since we also have to arrange.
 
 # Cyclic permutations #
 > Arrange n unique elements around a circle.
-Same as Permutations except arrange n-1 elements instead of n elements..
+
+Same logic as Permutations except arrange n-1 elements instead of n elements.
