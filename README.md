@@ -43,7 +43,7 @@ Eg2 : Given `{A, A, B, C}` and r = 3,
 ![image](https://user-images.githubusercontent.com/65414576/152680821-783bb8dd-16d9-4e30-91dc-889c82437283.png)
 
 ## `perm1()` :
->Given n elements (duplicates allowed), find all possible arrangements.
+>Given n elements (unique or not), find all possible arrangements.
 
 The multimap `Letters` holds the n elements.
 
