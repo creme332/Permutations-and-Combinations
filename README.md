@@ -12,7 +12,9 @@ If *i* = 2 and `ChooseFrom = {'A', 'B', 'C', 'D'}`, we are allowed to choose ele
 
 Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`,
 
-`all = {AB, AC, BC}`
+```cpp 
+all = {AB, AC, BC}
+```
 
 ![image](https://user-images.githubusercontent.com/65414576/155157469-e278d864-1500-4e58-996d-3f5bd2ece10c.png)
 
@@ -23,7 +25,9 @@ Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`,
 
 Eg : Set `ChooseFrom = {A,B,C}` and `r = 2`, 
 
-`all = {AA, AB, AC, BB, BC, CC}`
+```cpp 
+all = {AA, AB, AC, BB, BC, CC}
+```
 
 ## `comb2()` :
 >Given n elements, some of which may not unique, choose r elements. You cannot use more elements than given. 
@@ -38,7 +42,22 @@ Eg2 : Given `{A, A, B, C}` and r = 3,
 
 `all = AAB, AAC, ABC `
 
+### Sample problem ###
+```
+Find the number of ways to select four letters from the 8 letters of the word TOMORROW.
+```
+```cpp
+std::vector<char> ChooseFrom={'T','O','M','O','R','R','O','W'}; //n elements from which r elements will be selected
+// Code for Comb2() here //
+int main() {
+	sort(ChooseFrom.begin(), ChooseFrom.end()); //ChooseFrom MUST be sorted for comb to work
+	comb2(4, 0, "");
+	int count = 0;
+	for (auto i : all) { count++;std::cout << i << "\n"; }
+	std::cout << "Number of selections : "<< count << "\n"; //22
+}
 
+```
 # Permutations 
 ![image](https://user-images.githubusercontent.com/65414576/152680821-783bb8dd-16d9-4e30-91dc-889c82437283.png)
 
