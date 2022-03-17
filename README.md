@@ -287,7 +287,10 @@ For example, for 3 symbols (123) there are 3! or 6 different permutations contai
 
 ## Resources ##
 https://rosettacode.org/wiki/Superpermutation_minimisation#C.2B.2B
+
+
 https://www.youtube.com/watch?v=wJGE4aEWc28
+
 https://www.youtube.com/watch?v=OZzIvl1tbPo
 
 # Future work # 
