@@ -204,6 +204,17 @@ The number of arrangements of n unique elements is n!.
 ```
 EXAMPLE : Arrange the elements in {A, B, C}
 ```
+Finite state transition diagram. Starting at any node, stop when 3 letters are obtained.
+
+```mermaid
+graph TD
+A-->B
+A-->C
+B-->A
+B-->C
+C-->A
+C-->B
+```
 
 Terminal :
 ```
