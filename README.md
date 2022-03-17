@@ -5,7 +5,7 @@
 
 [Permutations without repetition](#h3)
 
-[Permutations without repetition](#h4)
+[Permutations with repetition](#h4)
 
 [Partial Permutations without repetition](#h5)
 
