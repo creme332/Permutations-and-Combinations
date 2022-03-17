@@ -309,6 +309,8 @@ Answer = 54. Run code from `CyclicPermutationProblem.cpp`
 For example, for 3 symbols (123) there are 3! or 6 different permutations containing each of the symbols, 123, 132, 213, 231, 312, and 321. A superpermutation is a string containing all of these n! permutations, such as 123121321.
 
 ## Resources ##
+http://superpermutation.com/
+
 https://rosettacode.org/wiki/Superpermutation_minimisation#C.2B.2B
 
 
