@@ -1,9 +1,5 @@
 # Table of contents #
-Add images
 
-Review def of repeition/no repetition
-
-New description : Well-documented set of algorithms to find combinations and permutations (including partial, circular and superpermutations) of elements with/without repetition.
 
 
 # Combinations without repetition #
