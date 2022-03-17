@@ -1,8 +1,24 @@
 # Table of contents #
+[Combinations without repetition](#h1)
+
+[Combinations with repetition](#h2)
+
+[Permutations without repetition](#h3)
+
+[Permutations without repetition](#h4)
+
+[Partial Permutations without repetition](#h5)
+
+[Partial Permutations with repetition](#h6)
+
+[Circular permutations](#h7)
+
+[SuperPermutations](#h8)
 
 
 
-# Combinations without repetition #
+
+# Combinations without repetition <a name="h1"></a>
 
 ## Input has no duplicates ##
 >Given ***n*** unique elements, choose ***r*** elements without repetition (the same element cannot be chosen more than once).
@@ -113,7 +129,7 @@ selected more than once)
 Number of selections : 22
 ```
 
-# Combination with repetition # 
+# Combination with repetition <a name="h2"></a> 
 
 >Given ***n*** unique elements, choose  ***r*** elements with repetition (the same element can be chosen more than once).
 
@@ -181,7 +197,7 @@ Number of selections : 21
 # Permutations 
 A permutation is an arrangement of elements.
 
-## Permutations without repetition ##
+## Permutations without repetition <a name="h3"></a>
 >Given n unique elements, find all possible arrangements. A given element cannot be used more than once.
 
 The number of arrangements of n unique elements is n!.
@@ -200,7 +216,7 @@ Choose an option for permutations :
 {ABC, ACB, BAC, BCA, CAB, CBA}
 Number of arrangements : 6 
 ```
-## Permutations with repetition ##
+## Permutations with repetition <a name="h4"></a>
 > Given n elements, some of which may be duplicates, find all possible arrangements. 
 
 ```
@@ -216,7 +232,7 @@ Choose an option for permutations :
 {AABC, AACB, ABAC, ABCA, ACAB, ACBA, BAAC, BACA, BCAA, CAAB, CABA, CBAA}
 Number of arrangements : 12
 ```
-## Partial permutations without repetition ##
+## Partial permutations without repetition <a name="h5"></a>
 > Given  ***n*** unique elements, choose  ***k*** elements without repetition, and arrange.
 
 ```
@@ -238,7 +254,7 @@ Number of arrangements : 60
 ```
 
 
-## Partial permutation with repetition ##
+## Partial permutation with repetition <a name="h6"></a>
 >Given  ***n*** unique elements, choose  ***k*** elements with repetition, and arrange.
 
 The number of arrangements is `n^k`. 
@@ -255,7 +271,7 @@ BBB, BBC, BBD, BCA, BCB, BCC, BCD, BDA, BDB, BDC, BDD, CAA, CAB, CAC, CAD, CBA, 
 Number of arrangements : 64
 ```
 
-# Circular permutations #
+# Circular permutations <a name="h7"></a>
 > Arrange n unique elements around a circle.
 
 There are (n-1)! arrangements.
@@ -276,7 +292,7 @@ EXAMPLE : In how many ways can the numbers 1-10 be written in 4 sectors of a cir
 ```
 Answer = 54. Run code from `CyclicPermutationProblem.cpp`
 
-# Superpermutations #
+# Superpermutations <a name="h8"></a>
 
 >A superpermutation of ***n*** symbols is a string that contains each permutation of n symbols as a substring. 
 For example, for 3 symbols (123) there are 3! or 6 different permutations containing each of the symbols, 123, 132, 213, 231, 312, and 321. A superpermutation is a string containing all of these n! permutations, such as 123121321.
