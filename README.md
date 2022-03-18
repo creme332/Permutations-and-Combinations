@@ -317,6 +317,8 @@ Superpermutations
 ```
 
 ## Resources ##
+http://superpermutation.com/
+
 https://rosettacode.org/wiki/Superpermutation_minimisation#C.2B.2B
 
 
