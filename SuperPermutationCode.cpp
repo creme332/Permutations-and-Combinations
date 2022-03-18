@@ -3,7 +3,7 @@
 #include <vector>
  
 //https://rosettacode.org/wiki/Superpermutation_minimisation#C.2B.2B
-constexpr int MAX = 6;
+constexpr int MAX = 5;
  
 static std::vector<char> sp;
 static std::array<int, MAX> count;
