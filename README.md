@@ -198,7 +198,7 @@ Number of selections : 21
 A permutation is an arrangement of elements.
 
 ## Permutations without repetition <a name="h3"></a>
->Given n unique elements, find all possible arrangements. A given element cannot be used more than once.
+>Given $n$ unique elements, find all possible arrangements. A given element cannot be used more than once.
 
 The number of arrangements of n unique elements is n!.
 ```
@@ -228,7 +228,7 @@ Choose an option for permutations :
 Number of arrangements : 6 
 ```
 ## Permutations with repetition <a name="h4"></a>
-> Given n elements, some of which may be duplicates, find all possible arrangements. 
+> Given $n$ elements, some of which may be duplicates, find all possible arrangements. 
 
 ```
 EXAMPLE : Arrange the elements in {A, A, B, C}
@@ -249,7 +249,7 @@ Number of arrangements : 12
 ```
 EXAMPLE : Find the arrangements of 3 letters from {A, B, C, D, E}
 ```
-There are `5P3` arrangements.
+There are $5P3$ arrangements.
 
 Terminal:
 ```
@@ -268,7 +268,7 @@ Number of arrangements : 60
 ## Partial permutation with repetition <a name="h6"></a>
 >Given  ***n*** unique elements, choose  ***k*** elements with repetition, and arrange.
 
-The number of arrangements is `n^k`. 
+The number of arrangements is $n^k$. 
 
 ```
 Enter string : ABCD
@@ -283,9 +283,9 @@ Number of arrangements : 64
 ```
 
 # Circular permutations <a name="h7"></a>
-> Arrange n unique elements around a circle.
+> Arrange $n$ unique elements around a circle.
 
-There are (n-1)! arrangements.
+There are $(n-1)!$ arrangements.
 
 ```cpp
 Arrangements of  {A, B, C, D} in a circle :
@@ -296,7 +296,7 @@ Arrangements of  {A, B, C, D} in a circle :
 
 Notice that only {B, C, D} are being arranged relative to A.
 ```
-To find the circular arrangements of n elements,  find the permutationas of n-1 elements then add the n th element to each of the arrangements.
+To find the circular arrangements of n elements,  find the permutationas of $n-1$ elements then add the $n$-th element to each of the arrangements.
 
 ```
 EXAMPLE : In how many ways can the numbers 1-10 be written in 4 sectors of a circle such that the sum of any 3 consecutive sectors is less than 19?
@@ -306,7 +306,7 @@ Answer = 54. Run code from `CyclicPermutationProblem.cpp`
 # Superpermutations <a name="h8"></a>
 
 >A superpermutation of ***n*** symbols is a string that contains each permutation of n symbols as a substring. 
-For example, for 3 symbols (123) there are 3! or 6 different permutations containing each of the symbols, 123, 132, 213, 231, 312, and 321. A superpermutation is a string containing all of these n! permutations, such as 123121321.
+For example, for 3 symbols (123) there are $3!$ or 6 different permutations containing each of the symbols, 123, 132, 213, 231, 312, and 321. A superpermutation is a string containing all of these n! permutations, such as 123121321.
 
 ```
 Superpermutations
